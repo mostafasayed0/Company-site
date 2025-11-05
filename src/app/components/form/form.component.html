@@ -1,0 +1,115 @@
+ <div class="bg-gray-50  p-8 rounded-2xl shadow-lg max-w-2xl mx-auto">
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()"  class="space-y-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="flex flex-col">
+        <label for="fname" class="text-gray-700 font-semibold mb-2 text-right">اسم العائلة</label>
+        <input
+          type="text"
+          id="fname"
+          formControlName="fname"
+          placeholder="اسم العائلة"
+          class="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition text-right"
+          required>
+            @if(isInvalid('fname')) {
+          <small class="text-red-500 text-right mt-1">
+            يجب أن يكون الاسم بين 3 و 20 حرفًا
+          </small>
+             }
+      </div>
+
+      <div class="flex flex-col">
+        <label for="lname" class="text-gray-700 font-semibold mb-2 text-right">الاسم الاول</label>
+        <input
+          type="text"
+          id="lname"
+          formControlName="lname"
+          placeholder="الاسم الاول"
+          class="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition text-right"
+          required>
+          @if(isInvalid('lname')) {
+            <small class="text-red-500 text-right mt-1">
+              يجب أن يكون الاسم بين 3 و 20 حرفًا
+            </small>
+          }
+      </div>
+    </div>
+
+    <div class="flex flex-col">
+      <label for="email" class="text-gray-700 font-semibold mb-2 text-right">البريد الالكتروني</label>
+      <input
+        type="email"
+        id="email"
+        formControlName="email"
+        placeholder="yo@company.com"
+        class="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition"
+        required>
+         @if(isInvalid('email')) {
+          <small class="text-red-500 text-right mt-1">
+            يرجى إدخال بريد إلكتروني صحيح
+          </small>
+        }
+    </div>
+
+   <div class="flex flex-col">
+  <label for="tel" class="text-gray-700 font-semibold mb-2 text-right">رقم الهاتف</label>
+  <div class="flex gap-2">
+    <input
+      type="tel"
+      id="phone"
+      formControlName="phone"
+      placeholder="+1 (555) 000-0000"
+      class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition"
+      required>
+
+    <select class="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition bg-white cursor-pointer min-w-[140px]">
+      <option value="+966">السعودية 🇸🇦</option>
+      <option value="+20">مصر 🇪🇬</option>
+      <option value="+971">الإمارات 🇦🇪</option>
+      <option value="+965">الكويت 🇰🇼</option>
+      <option value="+974">قطر 🇶🇦</option>
+      <option value="+973">البحرين 🇧🇭</option>
+      <option value="+968">عمان 🇴🇲</option>
+      <option value="+962">الأردن 🇯🇴</option>
+      <option value="+961">لبنان 🇱🇧</option>
+    </select>
+  </div>
+   @if(isInvalid('phone')) {
+        <small class="text-red-500 text-right mt-1">
+          يرجى إدخال رقم هاتف صالح
+        </small>
+      }
+</div>
+
+    <div class="flex flex-col">
+      <label for="message" class="text-gray-700 font-semibold mb-2 text-right">الرسالة</label>
+      <textarea
+        id="message"
+        formControlName="message"
+        rows="5"
+        placeholder="اكتب رسالتك هنا..."
+        class="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition resize-none text-right"
+        required></textarea>
+            @if(isInvalid('message')) {
+        <small class="text-red-500 text-right mt-1">
+          يجب أن تحتوي الرسالة على 3 أحرف على الأقل
+    </small>
+  }
+    </div>
+
+  <div class="flex items-center gap-2 mt-3">
+  <input type="checkbox" id="acceptTerms" formControlName="acceptTerms">
+  <label for="acceptTerms">أوافق على الشروط والأحكام</label>
+</div>
+
+<div class="text-red-600 text-sm mt-1" *ngIf="contactForm.controls['acceptTerms'].touched && contactForm.controls['acceptTerms'].invalid">
+  يجب الموافقة على الشروط قبل المتابعة
+</div>
+
+
+    <button
+      type="submit"
+      class="w-full bg-orange-500 hover:bg-black text-white font-bold py-3 px-6 rounded-2xl transition duration-300 transform hover:scale-100 shadow-md hover:shadow-lg">
+      ارسال رسالة جديدة
+    </button>
+  </form>
+</div>

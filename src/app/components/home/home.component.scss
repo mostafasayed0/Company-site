@@ -1,0 +1,76 @@
+.main
+{
+  height: 100vh;
+  width: 100%;
+  background-image: url('../../../assets/img/375731259_3e31e313-393f-4350-87c4-3f97f723a889 2.png');
+  background-size: cover;
+}
+
+.btn
+{
+  @apply px-9 m-2 py-2.5 hover:bg-black font-semibold bg-gradient-to-l from-orange-50/70 rounded-3xl shadow-md hover:shadow-lg transition-all duration-500;
+}
+
+.arrow
+{
+  position: absolute;
+  top: 65%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+}
+.main-text
+{
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+.content
+{
+
+  padding: 10px;
+}
+
+@media screen and (min-width: 500px) {
+  .arrow {
+        position: absolute;
+        top: 117%;
+          left: 20%;
+          transform: translate(-50%, -50%);
+  }
+}
+
+
+@media (min-width: 640px) and (max-width: 769px) {
+  .arrow {
+        position: absolute;
+          top: 94%;
+          left: 24%;
+          transform: translate(-50%, -50%);
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .arrow {
+      position: absolute;
+      top: 85%;
+      left: 29%;
+      transform: translate(-50%, -50%);
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .arrow {
+    position: absolute;
+      top: 75%;
+      left: 33%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media (min-width: 1280px) and (max-width: 1536px) {
+  .arrow {
+    position: absolute;
+      top: 64%;
+      left: 35%;
+    transform: translate(-50%, -50%);
+  }
+}

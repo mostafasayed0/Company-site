@@ -1,0 +1,53 @@
+.main
+{
+  background-image: url('../../../assets/icons/Rectangle\ 8571.png');
+}
+.main-text
+{
+  font-size: xx-large;
+  font-weight: bolder;
+  
+}
+.image3{
+  right: 0;
+}
+.image3 img{
+  width: 725px;
+}
+.image2{
+  right: 48%;
+}
+.image2 img{
+  width: 700px;
+}
+.forWorkMeter{
+  height: 550px;
+}
+
+.flex.flex-col.items-center.text-center.group {
+  position: relative;
+  z-index: 99;
+}
+.line{
+  border: 1px dashed orange;
+    width: 81%;
+    height: 2px;
+    background: antiquewhite;
+    top: 28%;
+    transform: translatex(10%);
+    z-index: 0;
+}
+@media (min-width: 400px) and (max-width: 800px) {
+.line {
+    top: 13%;
+      width: 67%;
+      transform: translatex(22%);
+  }
+}
+@media (min-width: 800px) and (max-width: 1000px) {
+  .line {
+        top: 13%;
+        width: 67%;
+        transform: translatex(22%);
+  }
+}

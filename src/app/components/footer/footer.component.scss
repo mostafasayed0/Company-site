@@ -1,0 +1,21 @@
+footer {
+    background-color: #DE9D6B;
+    width: 100%;
+    min-height: 40vh;
+}
+.text{
+    color: #E5E8E8;
+}
+.route {
+  @apply text-white/60 hover:shadow-orange-500 hover:border-b-2 hover:border-orange-300 transition-all duration-100 ease-in-out;
+}
+ul li {
+    cursor: pointer;
+}
+@media screen and (max-width: 665px) {
+  .iphone
+  {
+    position: relative;
+    top: 0;
+  }
+}

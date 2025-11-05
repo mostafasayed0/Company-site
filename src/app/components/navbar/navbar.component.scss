@@ -1,0 +1,33 @@
+ul li {
+  cursor: pointer;
+}
+.btn {
+  @apply relative overflow-hidden px-9 m-2 py-2.5 font-semibold rounded-3xl shadow-md hover:shadow-lg transition-all duration-500 flex justify-center items-center bg-gradient-to-l from-orange-50/70;
+
+  span {
+    @apply block transition-transform duration-500;
+  }
+
+  .text-hover {
+    @apply absolute inset-0 flex justify-center items-center bg-black;
+    transform: translateY(100%);
+    transition: transform 0.2s;
+  }
+
+  &:hover .text-default {
+    transform: translateY(-200%);
+  }
+
+  &:hover .text-hover {
+    transform: translateY(0);
+  }
+}
+.route
+{
+  @apply text-black/65 hover:shadow-orange-500 hover:border-b-2 hover:border-orange-300 transition-all duration-100 ease-in-out;
+}
+
+.link-active
+{
+  @apply text-black/100 border-b-2 border-orange-300;
+}
